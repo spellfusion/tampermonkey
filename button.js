@@ -8,7 +8,6 @@ Button.Margins = {
     bottom: 10,
     left: 10
 };
-Button.Url = document.currentScript.src;
 Button.Floating = (label, onClick) => {
     let button = document.createElement("button");
     button.innerText = label;
