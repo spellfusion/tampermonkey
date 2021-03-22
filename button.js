@@ -19,6 +19,7 @@ Button.Floating = (label, onClick) => {
         "padding: 5px 10px;"+
         "cursor: pointer;"+
         "color: white;"+
+        "z-index: 10000;"+
         "bottom: 10px; right: "+Button.Margins.right+"px;";
     Button.Margins.right += label.length * Button.MarginPerTextLength + Button.MarginPerButton;
     document.body.appendChild(button);
