@@ -42,11 +42,16 @@
     <li>Aenean commodo ligula eget dolor.</li>
     <li>Aenean massa cum sociis natoque penatibus.</li>
 </ul>
+<div class="test" var="test">
+    Hello!
+</div>
 <script>
     Button.Floating("Download", () => { document.location = 'https://www.spellfusion.com'; });
     Button.Floating("Log", () => console.log("Test"));
     Button.Floating("Test56", () => console.log("Test"));
     Button.Floating("Super Test", () => console.log("Test"));
+    Button.Append(".test", "Super Test", (t) => console.log("Test", t.getAttribute('var')), 1000);
+    setTimeout(() => { document.body.innerHTML += "<div class='test'>Async div!</div>"; }, 2000);
 </script>
 </body>
 </html>
